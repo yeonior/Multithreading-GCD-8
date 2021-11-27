@@ -20,13 +20,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" id="adq-K0-ECQ" customClass="MyTableViewCell" customModule="Multithreading_GCD8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" id="adq-K0-ECQ" customClass="MyTableViewCell" customModule="Multithreading_GCD8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="adq-K0-ECQ" id="qGo-q6-2bb" customClass="MyTableViewCell" customModule="Multithreading_GCD8" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="adq-K0-ECQ" id="qGo-q6-2bb" customClass="MyTableViewCell" customModule="Multithreading_GCD8" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-Z6-aPH">
+                                                    <rect key="frame" x="188.5" y="181.5" width="37" height="37"/>
+                                                </activityIndicatorView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-g8-IqW">
                                                     <rect key="frame" x="20" y="11" width="374" height="378"/>
                                                 </imageView>
@@ -36,13 +39,17 @@
                                                 <constraint firstItem="LQl-g8-IqW" firstAttribute="leading" secondItem="qGo-q6-2bb" secondAttribute="leadingMargin" id="IE8-Im-u0d"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="LQl-g8-IqW" secondAttribute="bottom" id="Jnt-Pe-Xuf"/>
                                                 <constraint firstItem="LQl-g8-IqW" firstAttribute="top" secondItem="qGo-q6-2bb" secondAttribute="topMargin" id="Yu1-DL-pHs"/>
+                                                <constraint firstItem="T1B-Z6-aPH" firstAttribute="centerY" secondItem="qGo-q6-2bb" secondAttribute="centerY" id="hr8-aZ-ikF"/>
+                                                <constraint firstItem="T1B-Z6-aPH" firstAttribute="centerX" secondItem="qGo-q6-2bb" secondAttribute="centerX" id="v3N-xj-fwm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="myActivityIndicatorView" destination="T1B-Z6-aPH" id="54M-99-CqX"/>
                                             <outlet property="myImageView" destination="LQl-g8-IqW" id="CHg-JG-xqg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
