@@ -32,9 +32,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell")
-        let cell = UITableViewCell()
-        cell.backgroundColor = .brown
+        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath)
+        
+        if let imageCell = cell as? MyTableViewCell {
+            imageCell.backgroundColor = .yellow
+            return imageCell
+        }
         
         return cell
     }
